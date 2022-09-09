@@ -1,13 +1,15 @@
 #include "main.h"
 
-void pr_int(int valve)
+int pr_int(int valve)
 {
+    int count = 0;
     if (valve < 0)
     {
         valve *= -1;
-        putchar('-');
+        _putchar('-');
     }
     if (valve/10)
         pr_int(valve / 10);
-    putchar((valve % 10) + '0');
+    count += _putchar((valve % 10) + '0');
+    return(count);
  }
