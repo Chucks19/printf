@@ -1,6 +1,6 @@
 #include "main.h"
 
-int pr_int(int valve)
+void pr_int(int valve)
 {
     if (valve < 0)
     {
@@ -10,5 +10,4 @@ int pr_int(int valve)
     if (valve/10)
         pr_int(valve / 10);
     putchar((valve % 10) + '0');
-    return (0);
-}
+ }
