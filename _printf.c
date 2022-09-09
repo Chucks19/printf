@@ -45,10 +45,9 @@ for (i = 0; format[i] != '\0'; i++){
 			default:
 			break;
 		}
-	i++;
-	run += 2;	
+	i++;	
 	}
 }
-return (run);
+return (count);
 va_end(lp);
 }
