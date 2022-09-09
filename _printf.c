@@ -9,7 +9,7 @@
 
 int _printf(const char *format, ...)
 {
-int count, run = 0, j;
+int count, j;
 char *strin;
 unsigned int i;
 
