@@ -7,10 +7,8 @@ int pr_int(int valve)
         valve *= -1;
         putchar('-');
     }
-    if (valve)
-    {
+    if (valve/10)
         pr_int(valve / 10);
-        putchar((valve % 10) + '0');
-    }
+    putchar((valve % 10) + '0');
     return (0);
 }
