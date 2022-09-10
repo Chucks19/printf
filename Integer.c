@@ -2,14 +2,16 @@
 
 int pr_int(int n)
 {
-    int i = 1;
+    int i = 0;
     if (n < 0)
     {
         n *= -1;
         _putchar('-');
+        i++;
     }
     if (n/10)
         pr_int(n / 10);
-    _putchar((n % 10) + '0');
+    i += _putchar((n % 10) + '0');
+    
     return(i);
  }
