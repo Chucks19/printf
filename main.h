@@ -23,7 +23,7 @@ int (*f)();
 
 int count_digits(int temp);
 int printf_pointer(va_list val);
-int pr_int(int valve);
+int pr_int(int n);
 int printf_hex_aux(unsigned long int num);
 int printf_HEX_aux(unsigned int num);
 int printf_exclusive_string(va_list val);
