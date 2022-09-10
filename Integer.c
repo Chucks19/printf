@@ -9,9 +9,9 @@ int pr_int(int n)
         _putchar('-');
         i++;
     }
+
     if (n/10)
-        pr_int(n / 10);
-    i += _putchar((n % 10) + '0');
-    
+        i += pr_int(n / 10);
+        i += _putchar((n % 10) + '0');    
     return(i);
  }
