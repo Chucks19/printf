@@ -11,5 +11,5 @@ int pr_int(int valve)
     if (valve/10)
         pr_int(valve / 10);
     count += _putchar((valve % 10) + '0');
-    return(count);
+    return(count-1);
  }
