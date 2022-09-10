@@ -11,6 +11,6 @@ int pr_int(int n)
     }
     if (n/10)
        i += pr_int(n / 10);
-        i += _putchar((n % 10) + '0');    
+    i += _putchar((n % 10) + '0');    
     return(i);
  }
