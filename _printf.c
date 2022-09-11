@@ -10,7 +10,8 @@
 int _printf(const char *format, ...)
 {
 int count = 0, j;
-char *strin, *stri;
+char *strin;
+char *stri;
 unsigned int i;
 
 va_list lp;
@@ -48,13 +49,13 @@ for (i = 0; format[i] != '\0'; i++){
 				{
 					if (stri[j] == '\\' && stri[j+1] == 'n')
 					{ 
-						_putchar('\\');
-						_putchar('x');
-						_putchar('0');
-						_putchar('A');
+						count += _putchar('\\');
+						count += _putchar('x');
+						count += _putchar('0');
+						count += _putchar('A');
 						j++;
 					}
-					count += _putchar(strin[j]);
+					count += _putchar(stri[j]);
 				}
 				break;
 			case 'b':
