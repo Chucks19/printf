@@ -46,16 +46,11 @@ for (i = 0; format[i] != '\0'; i++){
 				break;
 			case 'p':
 				ptrin = va_arg(lp, char *);
-				if (!ptrin)
+				if (ptrin)
 				{
-					_putchar('(');
-					_putchar('n');
-					_putchar('i');
-					_putchar('l');
-					_putchar(')');
+					for (j = 0; ptrin[j] != '\0'; j++)
+					count += _putchar(ptrin[j]);
 				}
-				for (j = 8; ptrin[j] != '\0'; j++)
-				count += _putchar(ptrin[j]);
 				break;
 			case 'S':
 				stri = va_arg(lp, char *);
