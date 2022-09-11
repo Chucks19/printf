@@ -51,8 +51,11 @@ for (i = 0; format[i] != '\0'; i++){
 			case 'x' :	
 				count += hexa(va_arg(lp, int));
 				break;
+			case 'u' :
+				count += pr_u(va_arg(lp, int));
+				break;
 			default:
-			break;
+				break;
 		}
 	i++;	
 	}

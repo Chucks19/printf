@@ -22,6 +22,7 @@ int (*f)();
 } convert_match;
 
 int binary(int n);
+int pr_u(int n);
 int octa(int oct);
 int hexa(int hex);
 char prhex(int H);
