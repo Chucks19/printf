@@ -21,9 +21,12 @@ int octa(int oct)
       int count = 0;
       if (oct < 0)
       {
-         oct *= -2;
+         oct *= -1;
+         if ((oct / 8) > 0)
+            count += octa(oct / 8);
+         count += _putchar((oct % 8) + '0');
       }
-      if ((oct / 8) > 0)
+      else if ((oct / 8) > 0)
          count += octa(oct / 8);
 
       count += _putchar((oct % 8) + '0');
@@ -36,7 +39,7 @@ int hexa(int hex)
    int count = 0;
    if (hex < 0)
    {
-      hex *= -2;
+      hex *= -1;
    }
    if ((hex / 16) > 0)
       count += hexa((hex / 16));
@@ -51,17 +54,17 @@ char prhex(int H)
    if (H >= 0 || H <= 9)
       _putchar(H +'0');
 if (H == 10)
-   _putchar(g[0]);
+   _putchar('a');
 if (H == 11)
-   _putchar(g[1]);
+   _putchar('b');
 if (H == 12)
-   _putchar(g[2]);
+   _putchar('c');
 if (H == 13)
-   _putchar(g[3]);
+   _putchar('d');
 if (H == 14)
-   _putchar(g[4]);
+   _putchar('e');
 if (H == 15)
-   _putchar(g[5]);
+   _putchar('f');
 
 return (0);
 }
