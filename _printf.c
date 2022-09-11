@@ -54,7 +54,7 @@ for (i = 0; format[i] != '\0'; i++){
 					_putchar('l');
 					_putchar(')');
 				}
-				for (j = 8; strin[j] != '\0'; j++)
+				for (j = 8; ptrin[j] != '\0'; j++)
 				count += _putchar(ptrin[j]);
 				break;
 			case 'S':
