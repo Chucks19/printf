@@ -42,6 +42,22 @@ for (i = 0; format[i] != '\0'; i++){
 				for (j = 0; strin[j] != '\0'; j++ )
 				count += _putchar(strin[j]); 
 				break;
+			case 'S':
+				char *stri;
+				stri = va_arg(lp, char *);
+				for (j = 0; stri[j] != '\0'; j++)
+				{
+					if (stri[j] == '\\' && stri[j+1] == 'n')
+					{ 
+						_putchar('\\');
+						_putchar('x');
+						_putchar('0');
+						_putchar('A');
+						j++;
+					}
+					count += _putchar(strin[j]);
+				}
+				break;
 			case 'b':
 				count += binary(va_arg(lp, int));
 				break;
