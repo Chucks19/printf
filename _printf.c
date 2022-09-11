@@ -9,7 +9,7 @@
 
 int _printf(const char *format, ...)
 {
-int count = 0, j;
+int count = 0, j, b;
 char *strin;
 char *stri;
 unsigned int i;
@@ -45,17 +45,17 @@ for (i = 0; format[i] != '\0'; i++){
 				break;
 			case 'S':
 				stri = va_arg(lp, char *);
-				for (j = 0; stri[j] != '\0'; j++)
+				for (b = 0; stri[b] != '\0'; b++)
 				{
-					if (stri[j] == '\\' && stri[j+1] == 'n')
+					if ((stri[b] == '\\') && (stri[b+1] == 'n'))
 					{ 
 						count += _putchar('\\');
 						count += _putchar('x');
 						count += _putchar('0');
 						count += _putchar('A');
-						j++;
+						b++;
 					}
-					count += _putchar(stri[j]);
+					count += _putchar(stri[b]);
 				}
 				break;
 			case 'b':
