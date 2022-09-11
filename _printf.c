@@ -43,10 +43,33 @@ for (i = 0; format[i] != '\0'; i++){
 				for (j = 0; strin[j] != '\0'; j++ )
 				count += _putchar(strin[j]); 
 				break;
+			case 'p':
+				ptrin = va_arg(lp, char *);
+				if (!ptrin)
+				{
+					_putchar('(');
+					_putchar('n');
+					_putchar('i');
+					_putchar('l');
+					_putchar(')');
+				}
+				for (j = 8; strin[j] != '\0'; j++)
+				count += _putchar(ptrin[j]);
+				break;
 			case 'S':
 				stri = va_arg(lp, char *);
 				for (b = 0; stri[b] != '\0'; b++)
-				count += _putchar(stri[b]);
+				{
+					if ((stri[b] == '\\') && (stri[b+1] == 'n'))
+					{ 
+						count += _putchar('\\');
+						count += _putchar('x');
+						count += _putchar('0');
+						count += _putchar('A');
+						b++;
+					}
+					count += _putchar(stri[b]);
+				}
 				break;
 			case 'b':
 				count += binary(va_arg(lp, int));
