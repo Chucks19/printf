@@ -12,6 +12,7 @@ int _printf(const char *format, ...)
 int count = 0, j, b;
 char *strin;
 char *stri;
+char *ptrin;
 unsigned int i;
 
 va_list lp;
