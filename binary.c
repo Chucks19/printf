@@ -50,8 +50,7 @@ int hexa(int hex)
 
 char prhex(int H)
 {
-   char *g = "abcdef";
-   if (H >= 0 || H <= 9)
+if (H >= 0 || H <= 9)
       _putchar(H +'0');
 if (H == 10)
    _putchar('a');
