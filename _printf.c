@@ -46,18 +46,8 @@ for (i = 0; format[i] != '\0'; i++){
 			case 'S':
 				stri = va_arg(lp, char *);
 				for (b = 0; stri[b] != '\0'; b++)
-				{
-					if ((stri[b] == '\\') && (stri[b+1] == 'n'))
-					{ 
-						count += _putchar('\\');
-						count += _putchar('x');
-						count += _putchar('0');
-						count += _putchar('A');
-						b++;
-					}
 					count += _putchar(stri[b]);
-				}
-				break;
+					break;
 			case 'b':
 				count += binary(va_arg(lp, int));
 				break;
