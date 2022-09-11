@@ -25,7 +25,7 @@ int binary(int n);
 int pr_u(int n);
 int octa(int oct);
 int hexa(int hex);
-char prhex(int H);
+int prhex(int H);
 int count_digits(int temp);
 int printf_pointer(va_list val);
 int pr_int(int n);

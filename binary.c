@@ -48,8 +48,9 @@ int hexa(int hex)
    return(count);
 }
 
-char prhex(int H)
+int prhex(int H)
 {
+   int i = 1;
 if (H >= 0 || H <= 9)
       _putchar(H +'0');
 else if (H == 10)
@@ -65,5 +66,5 @@ else if (H == 14)
 else if (H == 15)
    _putchar('f');
 
-return (0);
+return (i);
 }
