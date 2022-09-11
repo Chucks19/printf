@@ -45,6 +45,12 @@ for (i = 0; format[i] != '\0'; i++){
 			case 'b':
 				count += binary(va_arg(lp, int));
 				break;
+			case 'o':
+				count += octa(va_arg(lp, int));
+				break;
+			case 'x' :	
+				count += hexa(va_arg(lp, int));
+				break;
 			default:
 			break;
 		}
