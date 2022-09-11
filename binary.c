@@ -52,17 +52,17 @@ char prhex(int H)
 {
 if (H >= 0 || H <= 9)
       _putchar(H +'0');
-if (H == 10)
+else if (H == 10)
    _putchar('a');
-if (H == 11)
+else if (H == 11)
    _putchar('b');
-if (H == 12)
+else if (H == 12)
    _putchar('c');
-if (H == 13)
+else if (H == 13)
    _putchar('d');
-if (H == 14)
+else if (H == 14)
    _putchar('e');
-if (H == 15)
+else if (H == 15)
    _putchar('f');
 
 return (0);
