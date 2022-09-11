@@ -10,7 +10,7 @@
 int _printf(const char *format, ...)
 {
 int count = 0, j;
-char *strin;
+char *strin, *stri;
 unsigned int i;
 
 va_list lp;
@@ -43,7 +43,6 @@ for (i = 0; format[i] != '\0'; i++){
 				count += _putchar(strin[j]); 
 				break;
 			case 'S':
-				char *stri;
 				stri = va_arg(lp, char *);
 				for (j = 0; stri[j] != '\0'; j++)
 				{
