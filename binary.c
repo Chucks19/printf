@@ -23,7 +23,7 @@ int octa(int oct)
 	}
 	if ((oct / 8) > 0)
 		count += octa(oct / 8);
-	count += _putchar((oct % 8) + '0')
+	count += _putchar((oct % 8) + '0');
 	
 	return (count++);
 }
