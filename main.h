@@ -17,8 +17,8 @@
 
 typedef struct format1cd 
 {
-char *id;
-int (*f)();
+	char *id;
+	int (*f)();
 } convert_match;
 
 int binary(int n);
